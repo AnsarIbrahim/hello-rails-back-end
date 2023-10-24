@@ -25,3 +25,10 @@ module HelloRailsBackEnd
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'http://localhost:3001' # Replace with your React app's URL
+    resource '*', headers: :any, methods: :get
+  end
+end
