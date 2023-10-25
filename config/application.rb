@@ -28,7 +28,7 @@ end
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:3001' # Replace with your React app's URL
+    origins 'https://react-frontend-01.netlify.app/' # Replace with your React app's URL
     resource '*', headers: :any, methods: :get
   end
 end
